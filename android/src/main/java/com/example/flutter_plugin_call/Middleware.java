@@ -88,7 +88,7 @@ public class Middleware {
 
     }
     public void leaveChannel() {
-        ENGINE.leaveChannel();
+//        ENGINE.leaveChannel();
         TEXTUREVIEW = null;
         unbindVideoService();
 //        handler.post(RtcEngine::destroy);
