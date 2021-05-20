@@ -13,8 +13,12 @@ class FlutterPluginCall {
 
   static Future<void> joinChannel(
       {String name, String id, String token}) async {
-    await _channel
-        .invokeMethod('join', {"name": name, "id": id, "token": token});
+    await _channel.invokeMethod('join', {
+      "name": "test1",
+      "id": "9f6c791648ea4bd6b2613b8874d20e2e",
+      "token":
+          "0069f6c791648ea4bd6b2613b8874d20e2eIABrvzLVWvsy5H+d2XFzrLiKWCC/xuuFqSbtLQuthGkuGeLcsooAAAAAEACRer0xEBemYAEAAQCZsaZg"
+    });
   }
 
   static Future<void> get leaveChannel async {
