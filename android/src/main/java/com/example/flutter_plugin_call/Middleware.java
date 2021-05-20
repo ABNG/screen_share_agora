@@ -76,7 +76,7 @@ public class Middleware {
         }
         catch (Exception e) {
             e.printStackTrace();
-
+            Toast.makeText(context, "cannot initialize Agora Rtc Engine", Toast.LENGTH_SHORT).show();
         }
         TEXTUREVIEW = new TextureView(context);
         joinChannel(name,token);

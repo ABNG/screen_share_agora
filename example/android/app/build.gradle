@@ -48,6 +48,4 @@ android {
 flutter {
     source '../..'
 }
-dependencies {
-    implementation 'com.github.agorabuilder:native-full-sdk:3.4.1'
-}
+
