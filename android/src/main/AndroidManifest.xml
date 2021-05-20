@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application>
+        <activity android:name=".initProjection"
+            android:theme="@style/transparent_activity"/>
         <service android:name="com.example.flutter_plugin_call.externalvideosource.ExternalVideoInputService"
             android:exported="false"
             android:foregroundServiceType="mediaProjection"/>

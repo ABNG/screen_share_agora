@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import android.content.Context;
 
+import android.content.Intent;
 import android.util.Log;
 
 
@@ -30,6 +31,7 @@ public class FlutterPluginCallPlugin implements FlutterPlugin, MethodCallHandler
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
     this.context = flutterPluginBinding.getApplicationContext();
+
     channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "flutter_plugin_call");
     channel.setMethodCallHandler(this);
   }
@@ -46,11 +48,11 @@ public class FlutterPluginCallPlugin implements FlutterPlugin, MethodCallHandler
       Log.i(TAG,name);
       Log.i(TAG,id);
       Log.i(TAG,token);
-      Middleware.getInstance().joinChannel(id,name,token);
+     Middleware.getInstance(context).joinChannel(id,name,token);
 
     }
     else if(call.method.equals("leave")){
-      Middleware.getInstance().leaveChannel();
+     Middleware.getInstance(context).leaveChannel();
     }
 //    else if(call.method.equals("camera")){
 ////      unbindVideoService();
@@ -86,7 +88,7 @@ public class FlutterPluginCallPlugin implements FlutterPlugin, MethodCallHandler
 //
 //    }
     else if(call.method.equals("mute")){
-      Middleware.getInstance().muteChannel();
+      Middleware.getInstance(context).muteChannel();
     }
     else {
       result.notImplemented();
@@ -117,5 +119,4 @@ public class FlutterPluginCallPlugin implements FlutterPlugin, MethodCallHandler
   public void onDetachedFromActivity() {
 
   }
-
 }
