@@ -12,7 +12,7 @@ class FlutterPluginCall {
   // }
 
   static Future<void> joinChannel(
-      {String name, String id, String token}) async {
+      {required String name,required String id,required String token}) async {
     await _channel
         .invokeMethod('join', {"name": name, "id": id, "token": token});
   }

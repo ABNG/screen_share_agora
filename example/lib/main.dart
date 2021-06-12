@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   TextEditingController channelName = TextEditingController();
   TextEditingController agoraID = TextEditingController();
   TextEditingController agoraToken = TextEditingController();
-  Map<Permission, PermissionStatus> statuses;
+  late Map<Permission, PermissionStatus> statuses;
 
   @override
   void initState() {
