@@ -25,7 +25,7 @@ import androidx.annotation.Nullable;
 import com.example.flutter_plugin_call.externalvideosource.ExternalVideoInputManager;
 import com.example.flutter_plugin_call.externalvideosource.ExternalVideoInputService;
 
-import io.agora.advancedvideo.externvideosource.IExternalVideoInputService;
+import io.agora.advancedvideo.externvideosource.*;
 import io.agora.rtc.Constants;
 import io.agora.rtc.IRtcEngineEventHandler;
 import io.agora.rtc.RtcEngine;
